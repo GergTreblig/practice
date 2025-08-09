@@ -38,6 +38,16 @@ def merge(left, right):
     result += right[right_index:]
     return result
 
+def insertion_sort(array):
+    for i in range(1, len(array)):
+        key = array[i]
+        j = i - 1
+        while j >= 0 and key < array[j]:
+            array[j + 1] = array[j]
+            j -= 1
+            array[j + 1] = key
+    return array
+
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     print_hi('PyCharm')
@@ -47,4 +57,7 @@ if __name__ == '__main__':
     print('Merge Sort')
     print(merge_sort([5, 4, 3, 2, 1]))
     print(merge_sort([5, 24, 30, 12, 2]))
+    print('Insertion Sort')
+    print(insertion_sort([5, 4, 3, 2, 1]))
+    print(insertion_sort([5, 24, 30, 12, 2]))
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
