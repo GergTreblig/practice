@@ -48,6 +48,15 @@ def insertion_sort(array):
             array[j + 1] = key
     return array
 
+def selection_sort(array):
+    for i in range(len(array)):
+        min_index = i
+        for j in range(i + 1, len(array)):
+            if array[j] < array[min_index]:
+                min_index = j
+        array[i], array[min_index] = array[min_index], array[i]
+    return array
+
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     print_hi('PyCharm')
@@ -60,4 +69,7 @@ if __name__ == '__main__':
     print('Insertion Sort')
     print(insertion_sort([5, 4, 3, 2, 1]))
     print(insertion_sort([5, 24, 30, 12, 2]))
+    print('Selection Sort')
+    print(selection_sort([5, 4, 3, 2, 1]))
+    print(selection_sort([5, 24, 30, 12, 2]))
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
