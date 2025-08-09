@@ -41,8 +41,10 @@ def merge(left, right):
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     print_hi('PyCharm')
+    print('Bubble Sort')
     print(bubble_sort([5, 4, 3, 2, 1]))
     print(bubble_sort([5, 24, 30, 2, 12]))
+    print('Merge Sort')
     print(merge_sort([5, 4, 3, 2, 1]))
     print(merge_sort([5, 24, 30, 12, 2]))
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
