@@ -10,12 +10,12 @@ def print_hi(name):
     # Use a breakpoint in the code line below to debug your script.
     print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
 
-def bubble_sort(array):
-    for i in range(len(array)):
-        for j in range(len(array) - i - 1):
-            if array[j] > array[j + 1]:
-                array[j], array[j + 1] = array[j + 1], array[j]
-    return array
+def bubble_sort(bubble_array):
+    for i in range(len(bubble_array)):
+        for j in range(len(bubble_array) - i - 1):
+            if bubble_array[j] > bubble_array[j + 1]:
+                bubble_array[j], bubble_array[j + 1] = bubble_array[j + 1], bubble_array[j]
+    return bubble_array
 
 def merge_sort(array):
     if len(array) <= 1:
