@@ -27,19 +27,19 @@ def merge_sort(merge_array):
     return merge(left, right)
 
 
-def merge(left, right):
+def merge(left_array, right_array):
     left_index, right_index = 0, 0
-    result = []
-    while left_index < len(left) and right_index < len(right):
-        if left[left_index] < right[right_index]:
-            result.append(left[left_index])
+    result_array = []
+    while left_index < len(left_array) and right_index < len(right_array):
+        if left_array[left_index] < right_array[right_index]:
+            result_array.append(left_array[left_index])
             left_index += 1
         else:
-            result.append(right[right_index])
+            result_array.append(right_array[right_index])
             right_index += 1
-    result += left[left_index:]
-    result += right[right_index:]
-    return result
+    result_array += left_array[left_index:]
+    result_array += right_array[right_index:]
+    return result_array
 
 def insertion_sort(array):
     for i in range(1, len(array)):
