@@ -18,12 +18,12 @@ def bubble_sort(bubble_array):
                 bubble_array[j], bubble_array[j + 1] = bubble_array[j + 1], bubble_array[j] # Swap elements simultaniously.
     return bubble_array
 
-def merge_sort(array):
-    if len(array) <= 1:
-        return array
-    middle = len(array) // 2
-    left = merge_sort(array[:middle])
-    right = merge_sort(array[middle:])
+def merge_sort(merge_array):
+    if len(merge_array) <= 1:
+        return merge_array
+    middle = len(merge_array) // 2
+    left = merge_sort(merge_array[:middle])
+    right = merge_sort(merge_array[middle:])
     return merge(left, right)
 
 
