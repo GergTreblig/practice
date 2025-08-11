@@ -11,10 +11,11 @@ def print_hi(name):
     print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
 
 def bubble_sort(bubble_array):
-    for i in range(len(bubble_array)):
-        for j in range(len(bubble_array) - i - 1):
-            if bubble_array[j] > bubble_array[j + 1]:
-                bubble_array[j], bubble_array[j + 1] = bubble_array[j + 1], bubble_array[j]
+    # Bubble sort algorithm to sort array by moving values relative to the value before it.
+    for i in range(len(bubble_array)): # For loop to check every element in array
+        for j in range(len(bubble_array) - i - 1): # For loop for index we are sorting. Reset to last position after floating.
+            if bubble_array[j] > bubble_array[j + 1]: # Compare current element to next element
+                bubble_array[j], bubble_array[j + 1] = bubble_array[j + 1], bubble_array[j] # Swap elements simultaniously.
     return bubble_array
 
 def merge_sort(array):
